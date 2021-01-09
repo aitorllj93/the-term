@@ -1,5 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { NgxModalWindowModule } from 'ngx-modal-window';
+
+import { MessagesModule } from './messages/messages.module';
 
 import { AppComponent } from './app.component';
 
@@ -8,7 +11,9 @@ import { AppComponent } from './app.component';
     AppComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    NgxModalWindowModule,
+    MessagesModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
