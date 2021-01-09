@@ -27,4 +27,4 @@ jobs:
           REPO: self
           BRANCH: gh-pages
           FOLDER: dist/the-term
-          GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
