@@ -23,7 +23,7 @@ body {
   border-bottom: 1px solid #c2c0c2 !important;
 
   .ui-titlebar {
-    color: black;
+    color: #333;
     font-size: 13px;
   }
 
@@ -39,12 +39,12 @@ body {
 
   .dt-icon-maximize,
   .dt-icon-normalize {
-    color: black;
+    color: #333;
     margin: 5px;
   }
 
   .dt-icon-close:after, .dt-icon-close:before {
-    background-color: black;
+    background-color: #333;
   }
 }
 
