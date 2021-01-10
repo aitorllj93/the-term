@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Store } from '@ngxs/store';
 import { Message } from './messages/state/message.model';
 import { SendMessage } from './messages/state/messages.actions';
@@ -8,7 +8,7 @@ import { SendMessage } from './messages/state/messages.actions';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   title = 'the-term';
 
   constructor(
@@ -30,6 +30,6 @@ export class AppComponent {
       new SendMessage(message),
       new SendMessage(message),
       new SendMessage(message),
-    ])
+    ]);
   }
 }
