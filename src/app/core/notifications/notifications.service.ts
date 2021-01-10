@@ -44,6 +44,7 @@ export class NotificationsService {
       text: floattingText,
       ...notification.options,
       theme: 'mint',
+      closeWith: ['click', 'button']
     });
 
     floatting.show();
