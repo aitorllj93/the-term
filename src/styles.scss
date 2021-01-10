@@ -9,6 +9,10 @@ body {
   width: 100%;
 }
 
+button:hover, .noty_bar:hover, .noty_body:hover {
+  cursor: pointer !important;
+}
+
 .ui-modal {
   border-radius: 6px;
 }
