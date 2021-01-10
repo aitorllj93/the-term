@@ -1,5 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
 
+@import "~noty/src/noty.scss";
+@import "~noty/src/themes/mint.scss";
+
 body {
   margin: 0;
   height: 100%;
@@ -56,4 +59,27 @@ body {
 
 .ui-modal-footer {
   display: none;
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+ngx-aside {
+  aside.right {
+    padding: 0;
+    // background-attachment: fixed;
+    // background: inherit;
+    width: calc(100vw - 70%);
+  }
+
+  // aside.right:before {
+  //   content: '';
+  //   position: absolute;
+  //   top: 0;
+  //   left: 0;
+  //   right: 0;
+  //   bottom: 0;
+  //   box-shadow: inset 0 0 2000px rgba(255, 255, 255, .5);
+  //   filter: blur(10px);
+  // }
 }

@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { Store } from '@ngxs/store';
+import { Message } from './messages/state/message.model';
+import { SendMessage } from './messages/state/messages.actions';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +10,26 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'the-term';
+
+  constructor(
+    private store: Store
+  ) {}
+
+  ngOnInit() {
+    const message: Message = {
+      author: {
+        username: 'Test',
+        picture: 'assets/images/avatars/001.svg',
+      },
+      text: 'Hello'
+    };
+
+    this.store.dispatch([
+      new SendMessage(message),
+      new SendMessage(message),
+      new SendMessage(message),
+      new SendMessage(message),
+      new SendMessage(message),
+    ])
+  }
 }

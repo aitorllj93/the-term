@@ -1,0 +1,29 @@
+
+<div class="container">
+
+  <div class="tab-group">
+    <div class="tab-item" [ngClass]="{
+      active: activeTab === activeTabTypes.UNREAD
+    }" (click)="selectUnreadTab()">
+      Unread
+    </div>
+    <div class="tab-item" [ngClass]="{
+      active: activeTab === activeTabTypes.ARCHIVED
+    }" (click)="selectArchivedTab()">
+      Archive
+    </div>
+  </div>
+
+  <ul class="list-group">
+    <ng-container *ngFor="let notification of notifications$ | async">
+      <li class="list-group-item">
+        <img class="img-circle media-object pull-left" [src]="notification.picture" width="64" height="64">
+        <div class="media-body">
+          <strong>{{ notification.title }}</strong>
+          <p>{{ notification.text }}</p>
+        </div>
+      </li>
+    </ng-container>
+  </ul>
+
+</div>

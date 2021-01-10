@@ -22,7 +22,7 @@
       </div>
 
       <div class="btn-group pull-right">
-        <button class="btn btn-default">
+        <button class="btn btn-default" (click)="notificationsPanel.visibleStatus ? notificationsPanel.hide() : notificationsPanel.show()">
           <span class="icon icon-bell"></span>
         </button>
         <button class="btn btn-default">
@@ -31,6 +31,31 @@
       </div>
     </div>
   </header>
+
+  <ngx-aside #notificationsPanel
+    [title]="'Notifications'"
+    [cancelButtonTitle]="'Discard'"
+    [submitButtonTitle]="'Send'"
+
+    [closeOnEscape]="true"
+    [showOverlay]="false"
+
+    [showDefaultFooter]="false"
+    [showDefaultHeader]="false">
+
+    <header class="toolbar toolbar-header"  (click)="notificationsPanel.hide()">
+      <h1 class="title" style="margin: 0">
+        <span class="icon icon-bell"></span>
+        Notifications
+        <span class="icon icon-cancel pull-right" style="margin-right: 10px;"></span>
+      </h1>
+    </header>
+
+    <app-notifications-panel></app-notifications-panel>
+
+    <footer>
+    </footer>
+  </ngx-aside>
 
   <ngx-modal-window #messagesAppModal class="messages-app-modal" [backdrop]="false" [maximizable]="true">
     <ng-container class="app-modal-header toolbar toolbar-header">Messages</ng-container>
